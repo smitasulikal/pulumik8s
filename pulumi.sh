@@ -7,7 +7,7 @@ set -e -x
 # pulumi
 curl -L https://get.pulumi.com/ | bash
 export PATH=$PATH:$HOME/.pulumi/bin
-
+apt-get update
 apt-get install python3-venv
 
 # Restore npm dependencies for our infra app.
@@ -18,8 +18,8 @@ pulumi login
 
 # Select the appropriate stack.
 pulumi stack select smitasulikal/gcp-py-functions/dev
-
-python3 -m venv venv
+apt-get update
+python3 -m venv myvenv
 
 case $BUILD_TYPE in
   PullRequest)
