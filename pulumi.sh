@@ -19,7 +19,7 @@ pulumi login
 # Select the appropriate stack.
 pulumi stack select smitasulikal/gcp-py-functions/dev
 apt-get update 
-python3.7 -m venv myvenv 
+python3 -m venv myvenv 
 
 case $BUILD_TYPE in
   PullRequest)
