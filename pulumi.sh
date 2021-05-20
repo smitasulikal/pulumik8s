@@ -8,9 +8,9 @@ set -e -x
 curl -L https://get.pulumi.com/ | bash
 export PATH=$PATH:$HOME/.pulumi/bin
 apt-get update
-apt-get install python3.9 
-apt-get install python3-pip
-apt-get install python3-venv
+apt-get install python3.9 -y
+apt-get install python3-pip -y
+apt-get install python3-venv -y
 
 # Restore npm dependencies for our infra app.
 yarn install
