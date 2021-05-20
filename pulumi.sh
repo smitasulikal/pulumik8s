@@ -5,8 +5,13 @@ set -e -x
 
 # Download and install required tools.
 # pulumi
-curl -L https://get.pulumi.com/ | bash
-export PATH=$PATH:$HOME/.pulumi/bin
+#curl -L https://get.pulumi.com/ | bash
+#export PATH=$PATH:$HOME/.pulumi/bin
+
+curl -fsSL https://get.pulumi.com | sh
+export PATH="$HOME/.pulumi/bin:$PATH"
+
+
 apt-get update
 apt-get install python3.9 -y
 apt-get install python3-pip -y
