@@ -12,8 +12,8 @@ apt-get install python3.9 -y
 apt-get install python3-pip -y
 apt-get install python3-venv -y
 
-sudo rm /usr/bin/python
-sudo ln -s /usr/bin/python3 /usr/bin/python
+rm /usr/bin/python
+ln -s /usr/bin/python3 /usr/bin/python
 
 # Restore npm dependencies for our infra app.
 yarn install
